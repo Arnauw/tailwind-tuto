@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --main-color: rgb(237, 112, 43);
-  --alt-color: 16px;
+  --main-color: #ed702b;
+  /* --main-font: */
+}
+
+.main-color {
+  color:#ed702b;
 }
