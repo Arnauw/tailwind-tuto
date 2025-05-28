@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.test {
+    color: #fff;
+    font-size: 100px;
+}
+
+.test2 {
+    color: blue;
+    font-size: 100px;
+}
