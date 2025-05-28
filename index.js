@@ -7,4 +7,4 @@ console.log('index.js loaded successfully.')
 //   document.body.style.backgroundColor = 'black';
 // });
 
-document.body.style.backgroundColor = 'black';
+// document.body.style.backgroundColor = 'black';

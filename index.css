@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
-.test {
-    color: #fff;
-    font-size: 100px;
-}
-
-.test2 {
-    color: blue;
-    font-size: 100px;
+:root {
+  --main-color: rgb(237, 112, 43);
+  --alt-color: 16px;
 }
