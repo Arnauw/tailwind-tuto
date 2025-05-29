@@ -4,13 +4,55 @@
   --color-main: #ed702b;
   /* --color-main: oklch(0.68 0.17 45.63); */
 }
+/* create class aliases like bg-main for example */
 
 @source './*.php';
 /* This allow to scan php file, 
 if you wanna use tailwind classes in php files */
 
+@plugin "@tailwindcss/typography";
+/* Adds plugins?
+'Use the @plugin directive to load a legacy JavaScript-based plugin'
+*/
+
 @utility c-main {
-    @apply bg-main;
+  @apply bg-main;
+  @variant md {
+    @apply bg-amber-300;
+  }
+  @variant lg {
+    @apply bg-amber-950;
+  }
+  @variant xl {
+    @apply bg-blue-900;
+  }
 }
-/* Example how to create a class / alias class */
+/* Example how to create a class / alias class 
+
+Also contains medias queries, it's mobile first.
+
+sm	40rem (640px)	@media (width >= 40rem) { ... }
+md	48rem (768px)	@media (width >= 48rem) { ... }
+lg	64rem (1024px)	@media (width >= 64rem) { ... }
+xl	80rem (1280px)	@media (width >= 80rem) { ... }
+2xl	96rem (1536px)	@media (width >= 96rem) { ... }
+
+Can be used in classed directly too 
+instead of with this class / alias :
+
+Width of 16 by default, 
+32 on medium screens, 
+and 48 on large screens :
+
+<img class="w-16 md:w-32 lg:w-48" src="..." />
+*/
+
+@utility stack-* {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * --value(integer));
+}
+/* Another example how to create a class / alias class 
+   NGL this is pretty crazy, that's really really good !
+*/
 
