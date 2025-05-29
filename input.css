@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
-.test {
-    color: #fff;
-    font-size: 100px;
+@theme {
+  --color-main: #ed702b;
+  /* --color-main: oklch(0.68 0.17 45.63); */
 }
 
-.test2 {
-    color: blue;
-    font-size: 100px;
+@source './*.php';
+/* This allow to scan php file, 
+if you wanna use tailwind classes in php files */
+
+@utility c-main {
+    @apply bg-main;
 }
+/* Example how to create a class / alias class */
+
