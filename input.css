@@ -92,6 +92,7 @@
 
 @theme {
   --color-main: oklch(0.68 0.17 45.63);
+  --color-secondary: #999;
   --font-oswald: "Oswald", sans-serif;
   --font-lora: "Lora", serif;
 }
@@ -101,7 +102,7 @@
 /* This allow to scan php file, 
 if you wanna use tailwind classes in php files */
 
-@plugin "@tailwindcss/typography";
+/* @plugin "@tailwindcss/typography"; */
 /* Adds plugins?
 'Use the @plugin directive to load a legacy JavaScript-based plugin'
 */
@@ -119,6 +120,8 @@ if you wanna use tailwind classes in php files */
   }
 }
 /* Example how to create a class / alias class 
+
+Also contains @apply which is just tailwind classes instead of real css
 
 Also contains medias queries, it's mobile first.
 
@@ -146,6 +149,13 @@ and 48 on large screens :
 /* Another example how to create a class / alias class 
    NGL this is pretty crazy, that's really really good !
 */
+
+@utility articles {
+  @apply flex flex-col w-[calc(50%-2.5rem)];
+}
+@utility article-footer {
+  @apply text-secondary pt-[12px] border-t-[2.4px] border-double border-t-[#ddd];
+}
 
 
 /* PAYPAL CSS */
