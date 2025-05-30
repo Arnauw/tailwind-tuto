@@ -1,8 +1,99 @@
 @import "tailwindcss";
 
+/* oswald-200 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-300 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-regular - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-500 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-600 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* oswald-700 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lora-regular - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/lora/lora-v35-latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lora-500 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/lora/lora-v35-latin_latin-ext-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lora-600 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/lora/lora-v35-latin_latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* lora-700 - latin_latin-ext */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/lora/lora-v35-latin_latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 @theme {
-  --color-main: #ed702b;
-  /* --color-main: oklch(0.68 0.17 45.63); */
+  --color-main: oklch(0.68 0.17 45.63);
+  --font-oswald: "Oswald", sans-serif;
+  --font-lora: "Lora", serif;
 }
 /* create class aliases like bg-main for example */
 
@@ -57,31 +148,29 @@ and 48 on large screens :
 */
 
 
-
-
 /* PAYPAL CSS */
 
 .paypal-powered-by {
-                    text-align: center;
-                    margin: 10px auto;
-                    height: 14px;
-                    font-family: PayPal Plain, system-ui, -apple-system, Roboto,
-                      "Segoe UI", Helvetica-Neue, Helvetica, Arial, sans-serif;
-                    font-size: 11px;
-                    font-weight: 400;
-                    font-style: italic;
-                    font-stretch: normal;
-                    color: #7b8388;
-                    position: relative;
-                    margin-right: 3px;
-                    bottom: 3px;
-                  }
+  text-align: center;
+  margin: 10px auto;
+  height: 14px;
+  font-family: PayPal Plain, system-ui, -apple-system, Roboto, "Segoe UI",
+    Helvetica-Neue, Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  color: #7b8388;
+  position: relative;
+  margin-right: 3px;
+  bottom: 3px;
+}
 
-                  .paypal-powered-by > .paypal-button-text,
-                  .paypal-powered-by > .paypal-logo {
-                    display: inline-block;
-                    vertical-align: middle;
-                    height: 16px;
-                    line-height: 16px;
-                    font-size: 11px;
-                  }
+.paypal-powered-by > .paypal-button-text,
+.paypal-powered-by > .paypal-logo {
+  display: inline-block;
+  vertical-align: middle;
+  height: 16px;
+  line-height: 16px;
+  font-size: 11px;
+}
