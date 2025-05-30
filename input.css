@@ -168,6 +168,37 @@ and 48 on large screens :
   border border-[#ddd] rounded-[3px] shadow-sm focus:outline-none focus:ring-2
    focus:ring-gray-400 focus:border-transparent placeholder-gray-400;
 }
+@utility sub-icons {
+  @apply flex
+  absolute
+  bg-[url("./imgs/modern_icon_sprite_2024_2.svg")]
+  bg-[0px_-5px]
+  
+  ;
+}
+@utility sub-texts {
+  @apply flex;
+}
+@utility arrows {
+  @apply flex
+  relative
+  p-2
+  border-t-[1px]
+  border-r-[1px]
+  border-b-[1px]
+  border-l-[3px]
+  border-l-[#ab42df]
+  border-solid
+  after:content-[url('./imgs/arrow.svg')]
+  after:absolute
+  after:top-[10px]
+  after:right-[12px]
+  after:w-[20px]
+  after:h-[20px]
+}
+@utility podcast-container {
+  @apply flex flex-col gap-[20px];
+}
 
 /* PAYPAL CSS */
 
