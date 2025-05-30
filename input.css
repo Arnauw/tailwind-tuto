@@ -156,6 +156,9 @@ and 48 on large screens :
 @utility article-footer {
   @apply text-secondary pt-[12px] border-t-[2.4px] border-double border-t-[#ddd];
 }
+@utility btn-nextpage {
+  @apply bg-black text-white py-2 px-4 rounded;
+}
 
 
 /* PAYPAL CSS */
