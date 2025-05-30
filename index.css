@@ -7,6 +7,7 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-black: #000;
     --color-white: #fff;
@@ -281,20 +282,7 @@
     }
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    &:focus {
-      border-color: transparent;
-    }
-    &:focus {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-    &:focus {
-      --tw-ring-color: var(--color-gray-400);
-    }
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-    }
+    focus: outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent;
   }
   .w-\[340px\] {
     width: 340px;
@@ -359,41 +347,14 @@
   .bg-\[\#f5f5f5\] {
     background-color: #f5f5f5;
   }
-  .bg-\[0px_-px\] {
-    background-color: 0px -px;
+  .bg-amber-700 {
+    background-color: var(--color-amber-700);
   }
   .bg-black {
     background-color: var(--color-black);
   }
-  .bg-\[0px_-1px\] {
-    background-position: 0px -1px;
-  }
-  .bg-\[0px_-2px\] {
-    background-position: 0px -2px;
-  }
-  .bg-\[0px_-3px\] {
-    background-position: 0px -3px;
-  }
-  .bg-\[0px_-4px\] {
-    background-position: 0px -4px;
-  }
   .bg-\[0px_-5px\] {
     background-position: 0px -5px;
-  }
-  .bg-\[0px_-10px\] {
-    background-position: 0px -10px;
-  }
-  .bg-\[0px_-25px\] {
-    background-position: 0px -25px;
-  }
-  .bg-\[0px_-30px\] {
-    background-position: 0px -30px;
-  }
-  .bg-\[0px_-35px\] {
-    background-position: 0px -35px;
-  }
-  .bg-\[0px_-45px\] {
-    background-position: 0px -45px;
   }
   .bg-\[0px_-55px\] {
     background-position: 0px -55px;
@@ -406,9 +367,6 @@
   }
   .bg-\[0px_-307px\] {
     background-position: 0px -307px;
-  }
-  .bg-\[0px_-308px\] {
-    background-position: 0px -308px;
   }
   .bg-\[0px_-355px\] {
     background-position: 0px -355px;
@@ -471,6 +429,21 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .focus\:ring-2 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-gray-400 {
+    &:focus {
+      --tw-ring-color: var(--color-gray-400);
+    }
   }
 }
 @font-face {

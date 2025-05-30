@@ -158,31 +158,51 @@ and 48 on large screens :
 */
 
 @utility articles {
-  @apply flex flex-col w-[calc(50%-2.5rem)];
+  @apply flex 
+  flex-col 
+  w-[calc(50%-2.5rem)];
 }
+
 @utility article-footer {
-  @apply text-secondary pt-[12px] border-t-[3px] border-double border-t-[#ddd];
+  @apply text-secondary 
+  pt-[12px] 
+  border-t-[3px] 
+  border-double 
+  border-t-[#ddd];
 }
+
 @utility inputs {
-  @apply w-full px-4 py-2.5 text-[#999] bg-[#f5f5f5] 
-  border border-[#ddd] rounded-[3px] shadow-sm focus:outline-none focus:ring-2
-   focus:ring-gray-400 focus:border-transparent placeholder-gray-400;
+  @apply w-full 
+  px-4 
+  py-2.5 
+  text-[#999] 
+  bg-[#f5f5f5] 
+  border 
+  border-[#ddd] 
+  rounded-[3px] 
+  shadow-sm 
+  placeholder-gray-400;
+  focus:outline-none 
+  focus:ring-2
+  focus:ring-gray-400 
+  focus:border-transparent 
+   
 }
 @utility sub-icons {
   @apply inline-block
   bg-[url("./imgs/modern_icon_sprite_2024_2.svg")]
-  /* bg-[0px_-5px] */
   bg-no-repeat
   bg-size-[50px]
   h-[38px]
   w-[50px]
   mt-[4px]
-  ;
 }
+
 @utility sub-texts {
   @apply flex
   p-[12px]
 }
+
 @utility arrows {
   @apply flex
   relative
@@ -197,10 +217,13 @@ and 48 on large screens :
   after:top-[14px]
   after:right-[12px]
   after:w-[20px]
-  after:h-[20px]
+  after:h-[20px];
 }
+
 @utility podcast-container {
-  @apply flex flex-col gap-[20px];
+  @apply flex 
+  flex-col 
+  gap-[20px]
 }
 
 /* PAYPAL CSS */
@@ -209,8 +232,8 @@ and 48 on large screens :
   text-align: center;
   margin: 10px auto;
   height: 14px;
-  font-family: PayPal Plain, system-ui, -apple-system, Roboto, "Segoe UI",
-    Helvetica-Neue, Helvetica, Arial, sans-serif;
+  font-family: PayPal Plain, system-ui, -apple-system, 
+  Roboto, "Segoe UI", Helvetica-Neue, Helvetica, Arial, sans-serif;
   font-size: 11px;
   font-weight: 400;
   font-style: italic;
