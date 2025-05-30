@@ -169,20 +169,23 @@ and 48 on large screens :
    focus:ring-gray-400 focus:border-transparent placeholder-gray-400;
 }
 @utility sub-icons {
-  @apply flex
-  absolute
+  @apply inline-block
   bg-[url("./imgs/modern_icon_sprite_2024_2.svg")]
-  bg-[0px_-5px]
-  
+  /* bg-[0px_-5px] */
+  bg-no-repeat
+  bg-size-[50px]
+  h-[38px]
+  w-[50px]
+  mt-[4px]
   ;
 }
 @utility sub-texts {
-  @apply flex;
+  @apply flex
+  p-[12px]
 }
 @utility arrows {
   @apply flex
   relative
-  p-2
   border-t-[1px]
   border-r-[1px]
   border-b-[1px]
@@ -191,7 +194,7 @@ and 48 on large screens :
   border-solid
   after:content-[url('./imgs/arrow.svg')]
   after:absolute
-  after:top-[10px]
+  after:top-[14px]
   after:right-[12px]
   after:w-[20px]
   after:h-[20px]
