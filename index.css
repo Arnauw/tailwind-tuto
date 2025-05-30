@@ -7,6 +7,7 @@
     'Noto Color Emoji';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -163,6 +164,9 @@
   }
 }
 @layer utilities {
+  .m-\[8px\] {
+    margin: 8px;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -171,6 +175,9 @@
   }
   .my-\[40px\] {
     margin-block: 40px;
+  }
+  .mb-\[8px\] {
+    margin-bottom: 8px;
   }
   .mb-\[16px\] {
     margin-bottom: 16px;
@@ -184,6 +191,9 @@
   .mb-\[32px\] {
     margin-bottom: 32px;
   }
+  .mb-\[px\] {
+    margin-bottom: px;
+  }
   .articles {
     display: flex;
     width: calc(50% - 2.5rem);
@@ -195,8 +205,41 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
   .h-\[65px\] {
     height: 65px;
+  }
+  .inputs {
+    width: 100%;
+    border-radius: 3px;
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: #ddd;
+    background-color: #f5f5f5;
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2.5);
+    color: #999;
+    &::placeholder {
+      color: var(--color-gray-400);
+    }
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    &:focus {
+      border-color: transparent;
+    }
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+    &:focus {
+      --tw-ring-color: var(--color-gray-400);
+    }
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+    }
   }
   .w-\[1140px\] {
     width: 1140px;
@@ -204,8 +247,20 @@
   .w-full {
     width: 100%;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow-\[1\] {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -225,9 +280,13 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .article-footer {
     border-top-style: var(--tw-border-style);
-    border-top-width: 2.4px;
+    border-top-width: 3px;
     --tw-border-style: double;
     border-style: double;
     border-top-color: #ddd;
@@ -251,6 +310,12 @@
   .bg-black {
     background-color: var(--color-black);
   }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .p-\[8px\] {
+    padding: 8px;
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -272,8 +337,29 @@
   .pr-\[40px\] {
     padding-right: 40px;
   }
+  .pb-\[1\] {
+    padding-bottom: 1;
+  }
+  .pb-\[8\] {
+    padding-bottom: 8;
+  }
+  .pb-\[8px\] {
+    padding-bottom: 8px;
+  }
+  .pb-\[12\] {
+    padding-bottom: 12;
+  }
+  .pb-\[12p\] {
+    padding-bottom: 12p;
+  }
+  .pb-\[12px\] {
+    padding-bottom: 12px;
+  }
   .pb-\[24px\] {
     padding-bottom: 24px;
+  }
+  .pb-\[87\] {
+    padding-bottom: 87;
   }
   .pl-\[40px\] {
     padding-left: 40px;
@@ -288,6 +374,9 @@
     --tw-tracking: 1px;
     letter-spacing: 1px;
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-main {
     color: var(--color-main);
   }
@@ -300,76 +389,83 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
 }
 @font-face {
   font-display: swap;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 200;
-  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-200.woff2') format('woff2');
+  src: url("./fonts/oswald/oswald-v53-latin_latin-ext-200.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 300;
-  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-300.woff2') format('woff2');
+  src: url("./fonts/oswald/oswald-v53-latin_latin-ext-300.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-regular.woff2') format('woff2');
+  src: url("./fonts/oswald/oswald-v53-latin_latin-ext-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-500.woff2') format('woff2');
+  src: url("./fonts/oswald/oswald-v53-latin_latin-ext-500.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
-  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-600.woff2') format('woff2');
+  src: url("./fonts/oswald/oswald-v53-latin_latin-ext-600.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/oswald/oswald-v53-latin_latin-ext-700.woff2') format('woff2');
+  src: url("./fonts/oswald/oswald-v53-latin_latin-ext-700.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Lora';
+  font-family: "Lora";
   font-style: normal;
   font-weight: 400;
-  src: url('./fonts/lora/lora-v35-latin_latin-ext-regular.woff2') format('woff2');
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-regular.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Lora';
+  font-family: "Lora";
   font-style: normal;
   font-weight: 500;
-  src: url('./fonts/lora/lora-v35-latin_latin-ext-500.woff2') format('woff2');
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-500.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Lora';
+  font-family: "Lora";
   font-style: normal;
   font-weight: 600;
-  src: url('./fonts/lora/lora-v35-latin_latin-ext-600.woff2') format('woff2');
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-600.woff2") format("woff2");
 }
 @font-face {
   font-display: swap;
-  font-family: 'Lora';
+  font-family: "Lora";
   font-style: normal;
   font-weight: 700;
-  src: url('./fonts/lora/lora-v35-latin_latin-ext-700.woff2') format('woff2');
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-700.woff2") format("woff2");
 }
 .paypal-powered-by {
   text-align: center;
@@ -397,15 +493,125 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-tracking: initial;
+      --tw-outline-style: solid;
     }
   }
 }
