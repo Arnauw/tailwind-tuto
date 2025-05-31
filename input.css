@@ -1,100 +1,93 @@
 @import "tailwindcss";
 
-/* oswald-200 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 200;
   src: url("./fonts/oswald/oswald-v53-latin_latin-ext-200.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* oswald-300 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 300;
   src: url("./fonts/oswald/oswald-v53-latin_latin-ext-300.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* oswald-regular - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
   src: url("./fonts/oswald/oswald-v53-latin_latin-ext-regular.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* oswald-500 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
   src: url("./fonts/oswald/oswald-v53-latin_latin-ext-500.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* oswald-600 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 600;
   src: url("./fonts/oswald/oswald-v53-latin_latin-ext-600.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* oswald-700 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
   src: url("./fonts/oswald/oswald-v53-latin_latin-ext-700.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* lora-regular - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Lora";
   font-style: normal;
   font-weight: 400;
   src: url("./fonts/lora/lora-v35-latin_latin-ext-regular.woff2")
-    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    format("woff2");
 }
 
-/* lora-500 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Lora";
   font-style: normal;
   font-weight: 500;
-  src: url("./fonts/lora/lora-v35-latin_latin-ext-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-500.woff2")
+  format("woff2");
 }
 
-/* lora-600 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Lora";
   font-style: normal;
   font-weight: 600;
-  src: url("./fonts/lora/lora-v35-latin_latin-ext-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-600.woff2")
+  format("woff2");
 }
 
-/* lora-700 - latin_latin-ext */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "Lora";
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/lora/lora-v35-latin_latin-ext-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/lora/lora-v35-latin_latin-ext-700.woff2")
+  format("woff2");
 }
 
 @theme {
@@ -111,7 +104,8 @@ if you wanna use tailwind classes in php files */
 
 /* @plugin "@tailwindcss/typography"; */
 /* Adds plugins?
-'Use the @plugin directive to load a legacy JavaScript-based plugin'
+'Use the @plugin directive to load 
+a legacy JavaScript-based plugin'
 */
 
 @utility c-main {
@@ -128,7 +122,8 @@ if you wanna use tailwind classes in php files */
 }
 /* Example how to create a class / alias class 
 
-Also contains @apply which is just tailwind classes instead of real css
+Also contains @apply which is just 
+tailwind classes instead of real css
 
 Also contains medias queries, it's mobile first.
 
@@ -147,6 +142,8 @@ and 48 on large screens :
 
 <img class="w-16 md:w-32 lg:w-48" src="..." />
 */
+
+/* my-0 mx-auto  */
 
 @utility stack-* {
   display: flex;
@@ -181,12 +178,11 @@ and 48 on large screens :
   border-[#ddd] 
   rounded-[3px] 
   shadow-sm 
-  placeholder-gray-400;
+  placeholder-gray-400
   focus:outline-none 
   focus:ring-2
   focus:ring-gray-400 
-  focus:border-transparent 
-   
+  focus:border-transparent;
 }
 @utility sub-icons {
   @apply inline-block
@@ -195,12 +191,12 @@ and 48 on large screens :
   bg-size-[50px]
   h-[38px]
   w-[50px]
-  mt-[4px]
+  mt-[4px];
 }
 
 @utility sub-texts {
   @apply flex
-  p-[12px]
+  p-[12px];
 }
 
 @utility arrows {
@@ -210,7 +206,6 @@ and 48 on large screens :
   border-r-[1px]
   border-b-[1px]
   border-l-[3px]
-  border-l-[#ab42df]
   border-solid
   after:content-[url('./imgs/arrow.svg')]
   after:absolute
@@ -223,7 +218,13 @@ and 48 on large screens :
 @utility podcast-container {
   @apply flex 
   flex-col 
-  gap-[20px]
+  gap-[20px];
+}
+
+@utility h2 {
+  @apply font-oswald
+  font-normal
+
 }
 
 /* PAYPAL CSS */
@@ -232,8 +233,9 @@ and 48 on large screens :
   text-align: center;
   margin: 10px auto;
   height: 14px;
-  font-family: PayPal Plain, system-ui, -apple-system, 
-  Roboto, "Segoe UI", Helvetica-Neue, Helvetica, Arial, sans-serif;
+  font-family: PayPal Plain, system-ui, 
+  -apple-system, Roboto, "Segoe UI",
+    Helvetica-Neue, Helvetica, Arial, sans-serif;
   font-size: 11px;
   font-weight: 400;
   font-style: italic;
