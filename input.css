@@ -212,7 +212,9 @@ and 48 on large screens :
   after:top-[14px]
   after:right-[12px]
   after:w-[20px]
-  after:h-[20px];
+  after:h-[20px]
+  hover:bg-[#b6b6b62f]
+  hover:underline
 }
 
 @utility podcast-container {
@@ -275,6 +277,51 @@ and 48 on large screens :
   focus:ring-offset-2 
   focus:ring-gray-500
 }
+
+@utility paypal-blue {
+  @apply w-full 
+  bg-[#0070ba] 
+  hover:bg-[#005ea6] 
+  text-white 
+  py-3 
+  px-4 
+  rounded-[3px] 
+  flex 
+  items-center 
+  justify-center 
+  text-lg 
+  shadow-sm 
+  hover:shadow-md 
+  transition-shadow
+}
+
+@utility paypal-gray {
+  @apply w-full 
+  bg-[#303134] 
+  hover:bg-[#202124] 
+  text-white 
+  py-3 
+  px-4 
+  rounded-[3px] 
+  flex 
+  items-center 
+  justify-center 
+  text-lg 
+  shadow-sm 
+  hover:shadow-md 
+  transition-shadow
+}
+
+@utility footer-li {
+  @apply border-b
+  border-solid
+  border-b-[#333]
+  hover:underline
+  pb-[8px]
+  mb-[8px]
+}
+
+
 
 /* PAYPAL CSS */
 
