@@ -221,12 +221,31 @@ and 48 on large screens :
   gap-[20px];
 }
 
+@utility h4 {
+  @apply font-oswald
+  text-[14px]
+  leading-[16.8px]
+  tracking-[1px]
+  uppercase
+  pb-[6px]
+  mb-[16px]
+}
+
+@utility h2-alt {
+  @apply font-lora
+  font-bold
+  text-[16px] 
+  leading-[1.2] 
+  my-[15px]
+}
+
 @utility h2 {
   @apply font-oswald
   mb-[16px]
   text-[24px]
   leading-[28.8px]
   hover:text-main
+  tracking-[1px]
 }
 
 @utility asterisk {
