@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header>
+    <header class="w-full fixed z-10">
       <nav>
         <ul
           class="h-[65px] text-[14px] tracking-[1px] bg-black text-white font-oswald uppercase flex justify-center items-center gap-10"
@@ -23,7 +23,7 @@
       </nav>
     </header>
 
-    <section id="title-area">
+    <section id="title-area" class="pt-[65px]">
       <h1 class="flex justify-center">
         <img
           src="imgs/Life-of-an-Architect-Site-Logo-2017.jpg"
@@ -45,7 +45,7 @@
           <div class="flex flex-wrap gap-10">
             <article class="articles">
               <div class="article-header">
-                <h2 class="mb-[16px]">
+                <h2 class="h2">
                   <a href="">Ep 176: Little White Lies</a>
                 </h2>
                 <p class="text-secondary mb-[24px]">
@@ -114,7 +114,7 @@
 
             <article class="articles">
               <div class="article-header">
-                <h2 class="mb-[16px]">
+                <h2 class="h2">
                   <a href="">Ep 175: Stupid Questions</a>
                 </h2>
                 <p class="text-secondary mb-[24px]">
@@ -183,7 +183,7 @@
 
             <article class="articles">
               <div class="article-header">
-                <h2 class="mb-[16px]">
+                <h2 class="h2">
                   <a href="">Ep 174: Dear Future Architects …</a>
                 </h2>
                 <p class="text-secondary mb-[24px]">
@@ -256,7 +256,7 @@
 
             <article class="articles">
               <div class="article-header">
-                <h2 class="mb-[16px]">
+                <h2 class="h2">
                   <a href="">Ep 173: Mentorship Matters</a>
                 </h2>
                 <p class="text-secondary mb-[24px]">
@@ -323,7 +323,7 @@
 
             <article class="articles">
               <div class="article-header">
-                <h2 class="mb-[16px]">
+                <h2 class="h2">
                   <a href="">Ep 172: A Week in the Life of an Architect</a>
                 </h2>
                 <p class="text-secondary mb-[24px]">
@@ -366,7 +366,7 @@
 
             <article class="articles">
               <div class="article-header">
-                <h2 class="mb-[16px]">
+                <h2 class="h2">
                   <a href="">Ep 171: The IQ of an Architect</a>
                 </h2>
                 <p class="text-secondary mb-[24px]">
@@ -440,7 +440,7 @@
 
         <section id="aside" class="mt-[32px] ml-[40px] w-[340px]">
           <aside class="">
-            <div class="search mb-[24px] ">
+            <div class="search mb-[24px]">
               <h4
                 class="text-[14px] tracking-[1px] font-oswald uppercase mb-[24px]"
               >
@@ -550,54 +550,83 @@
             </div>
             <div class="sub-mail mt-[60px] pt-[10px] pb-[10px] pl-[7.5px]">
               <div>
-                <h4 class="font-oswald font-bold text-[18px] leading-[1.2]">Subscribe to our mailing list</h4>
-                <p>
+                <h4
+                  class="font-oswald font-bold text-[18px] leading-[1.2] my-[15px]"
+                >
+                  Subscribe to our mailing list
+                </h4>
+                <p
+                  class="text-right text-[11px] font-[Helvetica, Arial, sans-serif] mr-[10px]"
+                >
                   <span class="asterisk">*</span>
                   indicates required
                 </p>
               </div>
-              <div class="form">
-                <label for="mce-EMAIL">
-                  Email Address
-                  <span class="asterisk">*</span>
-                </label>
-                <input
-                  type="email"
-                  value=""
-                  name="EMAIL"
-                  class="required email"
-                  id="mce-EMAIL"
-                />
-                <label for="mce-FNAME">First Name</label>
-                <input
-                  type="text"
-                  value=""
-                  name="FNAME"
-                  class=""
-                  id="mce-FNAME"
-                />
-                <label for="mce-LNAME">Last Name</label>
-                <input
-                  type="text"
-                  value=""
-                  name="LNAME"
-                  class=""
-                  id="mce-LNAME"
-                />
-                <input
-                  type="text"
-                  name="b_79137fd7a66c1032ebc641d26_6e2742cb77"
-                  tabindex="-1"
-                  value=""
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="button"
-                />
-              </div>
+              <form action="#" method="POST" class="">
+                <div class="mt-2">
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Email Address <span class="text-red-500">*</span>
+                  </label>
+                  <div class="mt-1">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                      class="inputs border-[#ABB0B2]"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-2">
+                  <label
+                    for="first-name"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    First Name
+                  </label>
+                  <div class="mt-1">
+                    <input
+                      id="first-name"
+                      name="first-name"
+                      type="text"
+                      autocomplete="given-name"
+                      class="inputs border-[#ABB0B2]"
+                      />
+                  </div>
+                </div>
+
+                <div class="mt-2">
+                  <label
+                    for="last-name"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Last Name
+                  </label>
+                  <div class="mt-1">
+                    <input
+                      id="last-name"
+                      name="last-name"
+                      type="text"
+                      autocomplete="family-name"
+                      class="inputs border-[#ABB0B2]"
+                      />
+                  </div>
+                </div>
+
+                <div>
+                  <button
+                    type="submit"
+                    class="btn-submit"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
             </div>
             <div class="merch">
               <div class="t-shirt">
