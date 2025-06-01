@@ -9,3 +9,4 @@ Update: The project is finished!
 Note : I used tailwindcss CLI and did not include it in the repo because the file is quite large and already hosted on github.
 
 You can find the tailwindcss executable [HERE](https://github.com/tailwindlabs/tailwindcss/releases/latest)
+
